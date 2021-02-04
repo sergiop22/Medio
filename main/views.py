@@ -12,7 +12,7 @@ def home(request):
     return render(request, 'layouts/home.html')
 
 def index(request):
-    return render(request, 'layouts/layout.html')
+    return render(request, 'layouts/index.html')
 
 def register(request):
     if request.method =="POST":

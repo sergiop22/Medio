@@ -4150,6 +4150,11 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.footer {
+  color: black;
+  text-align: center;
+}
+
 .card {
   position: relative;
   display: flex;
