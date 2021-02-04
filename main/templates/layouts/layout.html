@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> NombreProyecto </title>
+    <link href="../../static/css/bootstrap.css" rel="stylesheet"> 
+</head>
+
+<body>
+    <div id="layout">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index">NombreApp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto" style="padding-right: 70px;">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{user.first_name}} <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Mi cuenta</a>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <!--Scripts-->
+    <script src="../../static/js/bootstrap.js"></script>
+    
+</body>
+
+</html>
+

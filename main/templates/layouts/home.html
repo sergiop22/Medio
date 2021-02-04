@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> NombreProyecto </title>
+    <link href="../../static/css/style.css" rel="stylesheet"> 
+</head>
+<body>
+    <div id="base">
+        <nav class="navbar navbar-expand-md shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">NombreApp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="home">
+            <div class="box">
+                <h1>Innovando en el medio ambiente</h1>
+                <p>El espacio ideal para compartir tu experiencia y conocimiento</p>
+                <a class= "btn" href="{% url 'login' %}">Sign In</a>
+                <a class= "btn" href="{% url 'register' %}">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
