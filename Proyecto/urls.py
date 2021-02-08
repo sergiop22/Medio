@@ -26,6 +26,7 @@ urlpatterns = [
     path('register/', views.register, name="register"),
     path('login/', views.login_request, name="login"),
     path('logout/', views.logout_request, name="logout"),
+    path('user/', views.user, name="user")
 ]
 
 #configuración para cargar imagenes

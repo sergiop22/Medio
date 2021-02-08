@@ -1,0 +1,47 @@
+{% extends 'layouts/layout.html' %}
+{% block content %}
+
+<section class="container-fluid mx-auto col-7" style="margin-top: 8px; margin-bottom: 24px;">
+    <div class="row">
+        <div class="col">
+            <img src="../../static/images/base.jpeg" style="width: 160px; height: 160px; border-radius: 50%; margin-left: 5px;">
+        </div>
+        <div id="letra_inicial" class="col-9">
+            {{user.first_name}} {{user.last_name}}
+            <p style="color:lightslategrey; font-size: 1rem; margin-top: 5px;">{{user.username}}</p>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid mx-auto col-7">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+        <!--AQUI UN FOR PARA LOS POST EXISTENTES-->
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <!--AQUI TERMINA EL FOR-->
+        </ol>
+        <div class="carousel-inner">
+        <!--AQUI UN FOR PARA RECORRER TODOS LOS POST DEL USUARIO-->
+        <div class="carousel-item active">
+            <img src="../../static/images/base.jpeg" class="d-block w-100" role="button" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>Titulo de post</h5>
+            <p>Descripcion de post</p>
+            </div>
+        </div>
+        <!--AQUI TERMINA EL FOR-->
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

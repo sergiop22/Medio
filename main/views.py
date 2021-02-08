@@ -53,3 +53,5 @@ def logout_request(request):
     messages.info(request, "Saliste exitosamente")
     return redirect("home")
     
+def user(request):
+    return render(request, "user/user.html")
